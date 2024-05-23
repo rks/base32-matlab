@@ -11,7 +11,7 @@ A Base32 library for MATLAB.
 
 This library includes one Base32 implementation:
 
-- [Crockford's Base32](https://www.crockford.com/base32.html)
+-  [Crockford's Base32](https://www.crockford.com/base32.html)
 
 ### Crockford
 
@@ -21,4 +21,8 @@ This library includes one Base32 implementation:
 str = base32.Crockford.random(10);
 
 disp(str)
+```
+
+```matlabTextOutput
+TW4XM38HYY
 ```
