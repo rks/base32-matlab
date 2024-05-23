@@ -1,0 +1,20 @@
+{
+    "_schemaVersion": "1.0.0",
+
+    "base32.Crockford.random": {
+        "inputs": [
+            {
+                "name": "n",
+                "kind": "required",
+                "type": ["numeric", "positive"],
+                "purpose": "Length of generated string"
+            },
+            {
+                "name": "RandFn",
+                "kind": "namevalue",
+                "type": ["function_handle"],
+                "purpose": "Custom random integer function"
+            }
+        ]
+    }
+}
