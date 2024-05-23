@@ -2,7 +2,7 @@ classdef Crockford
     %CROCKFORD Douglas Crockford's Base32.
     %  See https://www.crockford.com/base32.html
 
-    properties (Constant)
+    properties (Constant = true, Access = private)
         ENCODING = "0123456789ABCDEFGHJKMNPQRSTVWXYZ";
         ENCODING_LENGTH = 32;
     end
