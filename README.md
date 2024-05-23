@@ -1,20 +1,24 @@
-# base32-matlab
 
-Base32 library for MATLAB.
+# base32
 
-## Overview
+A Base32 library for MATLAB.
 
-> Base32 is a notation for encoding arbitrary byte data using a restricted set of
-> symbols that can be conveniently used by humans and processed by computers.
+# Description
 
-—[Wikipedia](https://en.wikipedia.org/wiki/Base32)
+*Base32 is a notation for encoding arbitrary byte data using a restricted set of symbols that can be conveniently used by humans and processed by computers.*
 
-This `base32` library currently only includes one implementation ("[Crockford's Base32](https://www.crockford.com/base32.html)"),
-and a single function (generate a random string).
 
-## HOWTO
+— [Wikipedia](https://en.wikipedia.org/wiki/Base32)
 
-### Generate a random Base32 string
+# Features
+
+This library includes one Base32 implementation:
+
+-  [Crockford's Base32](https://www.crockford.com/base32.html) 
+## Crockford
+### **`base32.Crockford.random`**
+
+Generates a random Base32 string.
 
 ```matlab
 str = base32.Crockford.random(10);
