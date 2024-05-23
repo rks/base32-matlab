@@ -10,11 +10,12 @@ A Base32 library for MATLAB.
 ## Features
 
 This library includes one Base32 implementation:
+
 - [Crockford's Base32](https://www.crockford.com/base32.html)
 
 ### Crockford
 
-**`base32.Crockford.random -`** Generates a random Base32 string.
+**`base32.Crockford.random`** \- Generates a random Base32 string.
 
 ```matlab
 str = base32.Crockford.random(10);
