@@ -1,0 +1,23 @@
+{
+    "name": "base23",
+    "version": "1.0.0",
+    "id": "b3861879-0607-4538-8c19-b4a8d1b5651b",
+    "formerNames": [],
+    "displayName": "base23",
+    "summary": "Base32 library for MATLAB",
+    "description": "",
+    "provider": {
+        "name": "Randy Souza",
+        "organization": "MathWorks",
+        "email": "rsouza@mathworks.com",
+        "url": ""
+    },
+    "folders": [
+        {
+            "path": "toolbox"
+        }
+    ],
+    "dependencies": [],
+    "releaseCompatibility": ">16.1.0",
+    "schemaVersion": "1.0.0"
+}
