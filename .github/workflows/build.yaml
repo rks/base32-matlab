@@ -14,6 +14,7 @@ jobs:
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:
+          cache: true
           release: latest-including-prerelease
       - name: Run build
         uses: matlab-actions/run-build@v2
