@@ -1,8 +1,12 @@
 name: Run MATLAB build
-on: [push]
+
+on:
+  workflow_call:
+  push:
+
 jobs:
   build:
-    name: Build
+    name: Build and test
     runs-on: self-hosted
     steps:
       - name: Check out repository
