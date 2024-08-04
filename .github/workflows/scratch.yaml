@@ -12,11 +12,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: rks/file-exchange-toolbox
-          path: ${RUNNER_TEMP}/local-repository/FileExchangeToolbox
+          path: $RUNNER_TEMP/local-repository/FileExchangeToolbox
           sparse-checkout: |
             resources
             toolbox
       - run: |
           pwd
-          ls -lA ${GITHUB_WORKSPACE}
-          ls -lA ${RUNNER_TEMP}
+          echo $GITHUB_WORKSPACE
+          echo $RUNNER_TEMP
+          ls -lA $GITHUB_WORKSPACE
+          ls -lA $RUNNER_TEMP
