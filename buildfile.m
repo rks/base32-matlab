@@ -15,11 +15,16 @@ function plan = buildfile
 end
 
 function installDependencies
-    repositories = mpmListRepositories;
+    % Can't use MPM functions in non-interactive contexts like GitHub
+    % Actions.
+    %
+    % repositories = mpmListRepositories;
+    % 
+    % if isempty(repositories)
+    %     mpmAddRepository("local", getenv("MPM_REPOSITORY_PATH"));
+    % end
+    % 
+    % mpminstall("FileExchangeToolbox", Prompt=false, Verbosity="quiet");
 
-    if isempty(repositories)
-        mpmAddRepository("local", getenv("MPM_REPOSITORY_PATH"));
-    end
-
-    mpminstall("FileExchangeToolbox", Prompt=false, Verbosity="quiet");
+    addpath(fullfile(getenv("MPM_REPOSITORY_PATH"), "FileExchangeToolbox", "toolbox"));
 end
