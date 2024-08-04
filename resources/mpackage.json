@@ -1,10 +1,10 @@
 {
-    "name": "base23",
+    "name": "Base32",
     "version": "1.0.0",
     "id": "b3861879-0607-4538-8c19-b4a8d1b5651b",
     "formerNames": [],
-    "displayName": "base23",
-    "summary": "Base32 library for MATLAB",
+    "displayName": "Base 32",
+    "summary": "Base 32 library for MATLAB",
     "description": "",
     "provider": {
         "name": "Randy Souza",
@@ -17,7 +17,13 @@
             "path": "toolbox"
         }
     ],
-    "dependencies": [],
+    "dependencies": [
+        {
+            "name": "FileExchangeToolbox",
+            "compatibleVersions": "",
+            "id": "7f12fe93-1399-4051-816a-d254c43e25e1"
+        }
+    ],
     "releaseCompatibility": ">16.1.0",
     "schemaVersion": "1.0.0"
 }
