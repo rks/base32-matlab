@@ -15,4 +15,6 @@ jobs:
         with:
           node-version: lts/*
       - name: Extract package version
-        run: node --eval 'console.log(JSON.parse(fs.readFileSync("resources/mpackage.json")).version)'
+        run: echo PACKAGE_VERSION=$(node --eval 'console.log(JSON.parse(fs.readFileSync("resources/mpackage.json")).version)') >> $GITHUB_ENV
+      - name: Verify version
+        run: echo $PACKAGE_VERSION
