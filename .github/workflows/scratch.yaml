@@ -1,0 +1,19 @@
+name: Spike action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  scratch:
+    name: Scratch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out dependency
+        uses: actions/checkout@v4
+        with:
+          repository: rks/file-exchange-toolbox
+          sparse-checkout: |
+            toolbox
+      - run: |
+          pwd; ls -lA ..; tree -a $GITHUB_WORKSPACE
+       
