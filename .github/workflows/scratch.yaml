@@ -4,21 +4,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  scratch:
-    name: Scratch
+  tag:
+    name: Create tag
     runs-on: ubuntu-latest
     steps:
-      - name: Check out dependency
+      - name: Check out repository
         uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          repository: rks/file-exchange-toolbox
-          path: $RUNNER_TEMP/local-repository/FileExchangeToolbox
-          sparse-checkout: |
-            resources
-            toolbox
-      - run: |
-          pwd
-          echo $GITHUB_WORKSPACE
-          echo $RUNNER_TEMP
-          ls -lA $GITHUB_WORKSPACE
-          ls -lA $RUNNER_TEMP
+          node-version: lts/*
+      - name: Extract package version
+        run: node --eval 'console.log(JSON.parse(fs.readFileSync("resources/mpackage.json")).version)'
