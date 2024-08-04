@@ -12,8 +12,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: rks/file-exchange-toolbox
+          path: local-repository/FileExchangeToolbox
           sparse-checkout: |
+            resources
             toolbox
       - run: |
-          pwd; ls -lA ..; tree -a $GITHUB_WORKSPACE
-       
+          pwd
+          tree -a $GITHUB_WORKSPACE
+          ls -lA $GITHUB_WORKSPACE
