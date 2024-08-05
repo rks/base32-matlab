@@ -10,5 +10,3 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-      - name: Foo
-        run: echo "foo"
