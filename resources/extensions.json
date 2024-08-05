@@ -1,0 +1,11 @@
+{
+    "mw": {
+        "mpm": {
+            "publishing": {
+                "fileexchange": {
+                    "autoVersion": true
+                }
+            }
+        }
+    }
+}
