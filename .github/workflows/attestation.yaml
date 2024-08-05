@@ -1,0 +1,14 @@
+name: Create attestation
+
+on:
+  workflow_dispatch:
+
+jobs:
+  tag:
+    name: Create attestation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Foo
+        run: echo "foo"
