@@ -11,7 +11,8 @@
 # Compiled MEX files
 *.mex*
 
-# Packaged app and toolbox files
+# Package files
+releases/
 *.mlappinstall
 *.mltbx
 

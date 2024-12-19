@@ -7,3 +7,20 @@ function plan = buildfile
 
     plan.DefaultTasks = "test";
 end
+
+function packageTask(~)
+    pkg = matlab.mpm.Package(pwd);
+
+    fileName = sprintf("%s-%s.zip", pkg.Name, pkg.Version);
+
+    [~, ~, ~] = mkdir(fullfile(pwd, "releases"));
+
+    archivePath = fullfile(pwd, "releases", fileName);
+
+    fileList = [ ...
+        pkg.Folders(:).Path ...
+        "resources/mpackage.json" ...
+    ];
+
+    zip(archivePath, fileList);
+end
