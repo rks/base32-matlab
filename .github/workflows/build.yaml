@@ -16,7 +16,7 @@ jobs:
         with:
           cache: true
           release: latest-including-prerelease
-      - name: Run build
+      - name: Run tests
         uses: matlab-actions/run-build@v2
         with:
-          tasks: package
+          tasks: test
