@@ -27,3 +27,8 @@ jobs:
         uses: actions/attest-build-provenance@v2
         with:
           subject-path: releases/Base32-*.zip
+      - name: Store package
+        uses: actions/upload-artifact@v4
+        with:
+          name: mpm-package
+          path: releases/Base32-*.zip
